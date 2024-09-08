@@ -2,6 +2,8 @@ const countryContainer = document.querySelector(".countries-container");
 const filterByRegion = document.querySelector(".filter");
 const searchInput=document.querySelector('.search-container')
 const themeChanger=document.querySelector('.theme-changer')
+const icon=document.querySelector('#icon')
+
 let allCountriesData;
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
@@ -23,8 +25,7 @@ function renderCountries(data) {
 
     countryCard.classList.add("country-card");
 
-    countryCard.href = `/country.html?name=${country.name.common}`;
-
+    countryCard.href = `/country.html?name=${country.name.common}`
     countryCard.innerHTML = `
   <img src="${country.flags.svg}" alt="flag">
            <div class="card-text">
@@ -47,6 +48,13 @@ searchInput.addEventListener('input',(e)=>{
   renderCountries(filteredCountries)
 })
 
-themeChanger.addEventListener('click',()=>{
+icon.addEventListener('click',()=>{
   document.body.classList.toggle('dark')
+  if(document.body.classList.contains("dark"))
+  {
+    icon.src='sun.png'
+  }
+  else{
+     icon.src='moon.png'
+  }
 })

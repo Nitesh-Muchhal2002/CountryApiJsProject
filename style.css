@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  
+}
 body {
   --background-color:white;
   --text-color:black;
@@ -40,7 +43,10 @@ a {
 .title {
   font-weight: 800;
 }
-
+#icon{
+    width: 90px;
+    mix-blend-mode: multiply;
+}
 .countries-container {
   max-width: 1200px;
   margin-top: 15px;
@@ -195,5 +201,11 @@ a {
     flex-direction: column;
     gap: 32px;
   
+  }
+}
+@media(max-width:1300px)
+{
+  .theme-changer img{
+     max-width: 30px;
   }
 }
