@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="country.js" defer></script>
+  </head>
+  <body class="dark">
+    <header class="header">
+      <div class="header-content">
+        <h2 class="title"><a href="/">Where in the world?</a></h2>
+        <p class="theme-changer"><i class="fa-regular fa-moon"></i> Dark Mode</p>
+      </div>
+    </header>
+    <main>
+      <span class="back-button" onclick="history.back()">
+        <i class="fa-solid fa-arrow-left"></i> Back</span
+      >
+      <div class="country-details">
+        <img src="" alt="" />
+        <div class="details-text-container">
+          <h1></h1>
+          <div class="details-text">
+            <p>
+              <strong>Native Name: </strong><span class="native-name"></span>
+            </p>
+            <p><strong>Population: </strong><span class="population"></span></p>
+            <p><strong>Region: </strong><span class="region"></span></p>
+            <p><strong>Capital: </strong><span class="capital"></span></p>
+            <p><strong>Currencies: </strong><span class="Currencies"></span></p>
+            <p><strong>Language: </strong><span class="Language"></span></p>
+          </div>
+          <div class="border-countries">
+            <strong>Border-Countries:</strong>
+          
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
