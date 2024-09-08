@@ -9,7 +9,7 @@ const capital = document.querySelector(".capital");
 const currencies = document.querySelector(".Currencies");
 const languages = document.querySelector(".Language");
 const borderCountry=document.querySelector('.border-countries')
-const themeChanger=document.querySelector('.theme-changer')
+const icon=document.querySelector('#icon')
 
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((res) => res.json())
@@ -65,6 +65,13 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
     }
   });
 
-  themeChanger.addEventListener('click',()=>{
+  icon.addEventListener('click',()=>{
     document.body.classList.toggle('dark')
+    if(document.body.classList.contains("dark"))
+    {
+      icon.src='sun.png'
+    }
+    else{
+       icon.src='moon.png'
+    }
   })
