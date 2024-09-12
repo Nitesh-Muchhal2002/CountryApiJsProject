@@ -62,8 +62,8 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       
     })
 
-    }
-  });
+  }
+  })
 
   icon.addEventListener('click',()=>{
     document.body.classList.toggle('dark')

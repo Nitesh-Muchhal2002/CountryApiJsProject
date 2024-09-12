@@ -10,13 +10,15 @@ fetch("https://restcountries.com/v3.1/all")
   .then((data)=>{
     renderCountries(data)
     allCountriesData=data
-  });
+  }).catch(()=>{
+    console.log("Api is not fetch Network issue")
+  })
 
 filterByRegion.addEventListener("change", (e) => {
   fetch(`https://restcountries.com/v3.1/region/${filterByRegion.value}`)
     .then((res) => res.json())
     .then(renderCountries);
-});
+})
 
 function renderCountries(data) {
   countryContainer.innerHTML = "";

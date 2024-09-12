@@ -1,9 +1,7 @@
 * {
   box-sizing: border-box;
 }
-:root {
-  
-}
+
 body {
   --background-color:white;
   --text-color:black;
@@ -41,10 +39,11 @@ a {
   cursor: pointer;
 }
 .title {
-  font-weight: 800;
+  font-weight: 900;
 }
 #icon{
     width: 90px;
+    height: 30px;
     mix-blend-mode: multiply;
 }
 .countries-container {
